@@ -1,0 +1,51 @@
+{
+  "orders": {
+    "description": "Money transfer orders placed by users",
+    "columns": {
+      "id": "Internal order ID",
+      "order_id": "External facing order reference",
+      "create_date": "When the order was created",
+      "modify_date": "Last modified timestamp",
+      "order_status": "Final status of the order (e.g. COMPLETED, FAILED)",
+      "current_order_status": "Current live status",
+      "currency_from": "Currency sent by the user",
+      "currency_to": "Currency received by the recipient",
+      "flat_fee": "Flat transfer fee charged",
+      "discount": "Any discount applied",
+      "bonus_amt": "Bonus amount added",
+      "payment_fee": "Payment method fee",
+      "payment_method": "Payment method used (e.g. DIRECT_TRANSFER)",
+      "payment_purpose": "Purpose of payment (e.g. FAMILY_SUPPORT)",
+      "order_status_sequence": "Status stage number",
+      "order_status_modified_at": "When order status was last updated",
+      "funds_position": "Where the funds are held",
+      "free_transfer_campaign": "Campaign tag for free transfers",
+      "user_gid": "Foreign key to users.external_id"
+    }
+  },
+  "users": {
+    "description": "Registered app users",
+    "columns": {
+      "id": "Internal user ID",
+      "external_id": "Public facing user UUID",
+      "name": "Full name",
+      "kyc_name": "KYC verified name",
+      "dob": "Date of birth",
+      "gender": "User's gender",
+      "nationality": "User's nationality",
+      "country": "User's country",
+      "app_id": "App source",
+      "recent_app_id": "Most recent app used",
+      "version": "App version used",
+      "onboarding_version": "Version of onboarding flow",
+      "onboarding_state": "Current onboarding state",
+      "profile_pic": "Path to profile picture",
+      "status": "User status (e.g. ACTIVE, INACTIVE)",
+      "deleted": "Flag to indicate soft-deletion",
+      "created_at": "When user account was created",
+      "updated_at": "Last update timestamp",
+      "created_by": "Admin that created user",
+      "updated_by": "Admin that last updated"
+    }
+  }
+}
